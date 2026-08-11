@@ -24,3 +24,15 @@ function createRectangle(len,wid){
 
 let rectangle1=createRectangle(3,5);
 
+///constructor function used parcal notation(first letter of function is capital)
+
+function Rectangle(len,wid){
+    this.length=len;
+    this.width=wid;}
+
+let rectangle2=new Rectangle(4,6);
+
+//add property to object
+rectangle2.draw=function(){
+    console.log("I am a rectangle");
+}
