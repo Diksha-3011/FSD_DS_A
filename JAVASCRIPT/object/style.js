@@ -10,3 +10,17 @@ let rectangle={
         console.log("I am a rectangle");
     }
 };
+
+
+/// factory function
+///constructor function
+function createRectangle(len,wid){
+    return {
+        length:len,
+        width:wid,
+        draw:function(){
+            console.log("I am a ractangle")
+        }} };
+
+let rectangle1=createRectangle(3,5);
+
