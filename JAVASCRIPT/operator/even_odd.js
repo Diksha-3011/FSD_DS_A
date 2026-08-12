@@ -4,4 +4,3 @@ if(s%2==0){
 }
 else{
     console.log("Odd");
-}
