@@ -9,7 +9,7 @@ let rectangle={
     draw:function(){
         console.log("I am a rectangle");
     }
-}
+};
 
 
 /// factory function
