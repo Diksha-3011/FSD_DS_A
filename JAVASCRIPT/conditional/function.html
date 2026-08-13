@@ -7,12 +7,14 @@
 </head>
 <body>
     <script>
-        function abes(){
-            document.write("Hello World"+"<br>");
+        function abes(a,b){
+            document.write((a+b)+"<br>");
+            return a+b;
         }
-        abes();
-        abes();
-        abes();
+        abes(20,10);
+        abes(30,20);
+        let c=abes(25,30);
+        console.log(c);
 
 
     </script>
