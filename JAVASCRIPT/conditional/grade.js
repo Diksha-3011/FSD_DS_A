@@ -1,17 +1,18 @@
-let a=95;
-if(a>=90){
-    console.log("A");
-}
-else if(a>=80){
-    console.log("B");
-}   
-else if(a>=70){
-    console.log("C");}
+// Armstrong number
 
-else if(a>=60){
-    console.log("D");
+let n=153;
+let sum=0;
+let num=n;
+prompt("Enter a number: ");
+
+while(n>0) {
+    let r=n%10;
+    sum+=r*r*r;
+    n=parseInt(n/10);
 }
-else
-{
-    console.log("F");
+
+if(sum===num) {
+    console.log("Armstrong number");
+} else {
+    console.log("Not an Armstrong number");
 }
