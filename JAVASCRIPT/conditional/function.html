@@ -16,10 +16,30 @@
         // let c=abes(25,30);
         // console.log(c);
 
-        const abes= (a,b) => a+b;
-        document.write(abes(4,3));
+        // const abes= (a,b) => a+b;
+        // document.write(abes(4,3));
 
+        let a = prompt(" given option are  1.car  2.helicopter 3.boat "+"<br>"+" enter your item name");
+    
 
+if (a == 1) {
+    const car = () => { 
+        alert("car name is fortuner and available 4 seats");
+        let seats=prompt("enter your seats");
+        document.write("your seats is "+seats+"<br>total cost is "+seats*20+"hundred");
+    };
+    car();
+} else if (a == 2) {
+    const helicopter = () => { alert("car name is BOEING and available 10 seats");
+        let seats=prompt("enter your seats");
+        document.write("your seats is "+seats+"  <br>total cost is "+seats*60+"hundred");};
+    helicopter(); 
+} else if (a == 3) {
+    const boat = () => { alert("car name is Titanic and available 2 seats");
+        let seats=prompt("enter your seats");
+        document.write("your seats is "+seats+" <br> total cost is "+seats*40+"  hundred"); };
+    boat(); 
+}
     </script>
 </body>
 </html>
