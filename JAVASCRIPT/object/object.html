@@ -15,6 +15,17 @@ const car={
     color:"black",
     seats:5
 };
+document.write(car.name+"<br>"+car.model+"<br>"+car.color+"<br>"+car.seats+"<br>");
+console.log(car);
+document.write(car);
+
+
+for(let key in car){
+    document.write("<br>"+key+":"+car[key]);
+
+}
+
+document.write("<br>"+Object.values(car));
 </script>
     
 </body>

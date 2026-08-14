@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const menu={
+        Tea:450,
+        Coffee:300,
+        Sugar:100,
+        Pulses:200
+    };
+    alert("given option are 1.Tea 2.Coffee 3.Sugar 4.Pulses enter your item name");
+    let a=prompt("enter your item name");
+    let b=prompt("enter your quantity");
+    if(a=="Tea"){
+        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Tea);
+    }
+    else if(a=="Coffee"){
+        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Coffee);
+    }
+    else if(a=="Sugar"){
+        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Sugar);
+    }
+    else if(a=="Pulses"){
+        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Pulses);
+    }
+
+   </script> 
+</body>
+</html>
