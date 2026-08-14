@@ -37,4 +37,13 @@ let obj1 = { name: "Alice" };
 let obj2 = obj1; // copied by reference
 obj2.name = "Bob";
 console.log(obj1.name); // Bob
+
+
+
+
+## JSON(java script object notation)
+
+
+
+
 ```
