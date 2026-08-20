@@ -3,32 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <script>
-    const menu={
-        Tea:450,
-        Coffee:300,
-        Sugar:100,
-        Pulses:200
-    };
-    alert("given option are 1.Tea 2.Coffee 3.Sugar 4.Pulses enter your item name");
-    let a=prompt("enter your item name");
-    let b=prompt("enter your quantity");
-    if(a=="Tea"){
-        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Tea);
-    }
-    else if(a=="Coffee"){
-        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Coffee);
-    }
-    else if(a=="Sugar"){
-        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Sugar);
-    }
-    else if(a=="Pulses"){
-        document.write("your item is " +a+"<br> your quantity is " +b+ "<br> your total cost is " +b*menu.Pulses);
-    }
+    <title>Grocery Menu</title>
 
-   </script> 
+    <style>
+        .menu {
+            width: 250px;
+            border: 2px solid purple;
+            padding: 20px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .item {
+            padding: 8px;
+            margin: 5px;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <h2>Menu</h2>
+        <div id="items"></div>
+        <button onclick="order()">Order Now</button>
+    </div>
+
+    <script>
+
+        const menu= {
+            Tea: 450,
+            Coffee: 600,
+            Sugar: 700,
+            Millets: 500
+        };
+        const image={
+            Tea: "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRPU2gVF_Mi9a-wZ7HZKZgSt6iPFS_dPjUv3EVOdk2w&s=10' width='100' height='100'>",
+            Coffee: "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9BWsHzKWXY3orjOriG-fEK5zNHO5nvvAX-j72BuCXGg&s=10' width='100' height='100'>",
+            Sugar: "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmDZv5qPdy8f9yLfJc9NYSc9heAa_Dj0PiuFo70BebFQ&s=10' width='100' height='100'>",
+            Millets: "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR77U1JzZpY0X4eAVxRmiULYZtGLh1PjaYePGbZPP9xpQ&s=10' width='100' height='100'>"
+        }
+
+        const items = document.getElementById("items");
+
+        for (let i in menu) {
+            items.innerHTML += `
+                <div class="item">
+
+                    <p>${i} - ₹${menu[i]}</p>
+                </div>
+            `;
+        }
+
+        function order() {
+
+            alert("Available options: Tea, Coffee, Sugar, Pulses");
+
+    let a = prompt("Enter your item name");
+    let b = parseInt(prompt("Enter your quantity"));
+
+    if (menu[a]!==undefined) {
+
+        let total=b*menu[a];
+
+        document.write(`
+            <div style="
+                width: 300px;
+                padding: 20px;
+                margin: 50px auto;
+                border: 2px solid black;
+                color:purple;
+                border-radius: 15px;
+                text-align: center;
+                font-family: Arial;
+                box-shadow: 0 4px 10px gray;
+            ">
+                <h2> Order Card</h2>
+                <p><b> ${image[a]}</p>
+                <p><b>Item:</b> ${a} </p>
+                <p><b>Quantity:</b> ${b}</p>
+                <p><b>Price:</b> ₹${menu[a]}</p>
+                <p><b>Total Cost:</b> ₹${total}</p>
+            </div>
+        `);
+
+    } else {
+        document.write("Item not available");
+    }
+        }
+
+    </script>
+
 </body>
 </html>
