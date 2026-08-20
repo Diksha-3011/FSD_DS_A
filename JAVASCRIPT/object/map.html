@@ -10,9 +10,10 @@
         
         const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-        const even=numbers.map((i) => i%2==0);
+        const even=numbers.filter((i) => i%2==0);
+        const squre=even.map((i) => i*i);
         console.log("numbers:",numbers);
-        console.log("even numbers:",even);
+        console.log("square of even numbers:",squre);
     </script>
 </body>
 </html>
