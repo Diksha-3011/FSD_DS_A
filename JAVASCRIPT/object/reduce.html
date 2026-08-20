@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        const even=numbers.filter((i) => i%2==0);
+        const squre=even.map((i) => i*i);
+        const sum=squre.reduce((i,s)=> (i+s));
+        console.log("numbers:",numbers);
+        console.log("square of even numbers:",squre);
+        console.log("sum of squares:",sum);
+    </script>
+</body>
+</html>
