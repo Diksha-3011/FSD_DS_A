@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const student=[
+        {
+            name:"Deepak",
+            cls:"B.TECH",
+            fee:100000
+        },
+        
+        {
+            name:"Rohit",
+            cls:"B.TECH",
+            fee:100000
+        },
+        {
+            name:"Rashmi",
+            cls:"10th",
+            fee:100000
+        },
+        
+        {
+            name:"Shivani",
+            cls:"MCA",
+            fee:100000
+        },
+        
+        {
+            name:"Rakesh",
+            cls:"MCA",
+            fee:100000
+        }]
+        const cls=prompt("Enter the class name to search the student details");
+        const ans=student.filter((i)=>i.cls==cls); 
+        if(ans.length==0){
+            document.write("No student found in class "+cls);
+        }else{
+
+        document.write("Student details of class "+cls+":"+"<br>");
+
+        for(let i=0;i<ans.length;i++){
+            document.write(ans[i].name+" "+ans[i].cls+" "+ans[i].fee+"<br>");
+        }}
+        
+       </script>
+</body>
+</html>
