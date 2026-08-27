@@ -1,4 +1,14 @@
-function SUM(a,b){
-    return a+b;
+function password_check(user,pass){
+    if(user == pass){
+        return "correct";
+    }
+    else{
+        return "not correct";
+    }
 }
-console.log(SUM(2,3));
+function sumWithMsg(callback,msgSUM){
+    const result= callback("diksha","diksha");
+    const fresult="HI your "+msgSUM+" are "+result+" ";
+    console.log(fresult);
+}
+sumWithMsg(password_check,"user and password");
