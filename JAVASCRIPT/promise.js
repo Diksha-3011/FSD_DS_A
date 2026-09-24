@@ -21,4 +21,13 @@ f1().then(f2)
         console.log(err);
     });
 
-f2();
+async function main(){
+    try{
+        await f1();
+        await f2();
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+main();
