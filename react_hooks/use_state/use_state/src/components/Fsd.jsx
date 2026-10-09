@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <h2>Add Names</h2>
+      <h2> To-DO List</h2>
 
       <input
         type="text"
@@ -29,7 +29,7 @@ function App() {
 
       <button onClick={addName}>Add Name</button>
 
-      <h3>Added Names:</h3>
+      <h3>Added TasksS:</h3>
 
       {names.map((item, index) => (
         <div key={index}>
