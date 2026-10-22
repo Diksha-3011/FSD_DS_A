@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "role": "admin",
+      "username": "admin",
+      "password": "admin123",
+      "name": "Administrator"
+    },
+    {
+      "id": "stu-1001",
+      "role": "student",
+      "username": "1001",
+      "password": "student123",
+      "name": "Aarav Sharma",
+      "rollNo": "1001",
+      "className": "B.Tech CSE",
+      "year": "3rd Year",
+      "section": "A"
+    },
+    {
+      "id": "stu-1002",
+      "role": "student",
+      "username": "1002",
+      "password": "student123",
+      "name": "Diya Verma",
+      "rollNo": "1002",
+      "className": "B.Tech CSE",
+      "year": "3rd Year",
+      "section": "A"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "att-1",
+      "studentId": "stu-1001",
+      "date": "2026-10-22",
+      "status": "Present"
+    },
+    {
+      "id": "att-2",
+      "studentId": "stu-1002",
+      "date": "2026-10-22",
+      "status": "Absent"
+    }
+  ],
+  "assignments": [],
+  "submissions": []
+}
